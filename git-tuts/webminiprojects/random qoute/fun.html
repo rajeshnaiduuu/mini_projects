@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">QUOTE OF THE DAY</h1>
+        <div class="content">
+            <span id="qoute">
+                 -Success depends upon the second letter of the Success word-
+            </span>
+        </div>
+        <p id="auother">James</p>
+        <button id="getquote">Generator</button>
+    </div>
+    <script>
+
+        let quoteEle = document.getElementById('qoute');
+        let authorEle = document.getElementById('auother');
+
+    
+        async function getQuote(){
+            let responce=await fetch ("https://api.quotable.io/random");
+            let qoute=await responce.json()
+            quoteEle.innerText = qoute.content
+            authorEle.innerText = "-- " + qoute.auother
+
+        }
+
+        document.getElementById('getquote').onclick=getQuote
+
+    </script>
+</body>
+</html>

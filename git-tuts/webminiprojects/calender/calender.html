@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calender.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+
+    <div class="calender">
+
+<div class="right">
+    <p id="date">01</p>
+    <p id="week">sunday</p>
+
+</div>
+<div class="left">
+    <p id="month">january</p>
+    <p id="year">2024</p>
+
+</div>
+    </div>
+    </div>
+</div>
+<script>
+
+const date=document.getElementById('date');
+const week=document.getElementById('week')
+const month= document.getElementById('month')
+const year=document.getElementById('year')
+let today=new Date()
+const weekdays=["sun","mon","tue","wed","thu","fri","sat"];
+const allmonths=["jan","feb","march","april","may","june","july","aug","sep","oct","nov","dec"];
+date.innerHTML=(today.getDate()<10?"0":"")+today.getDate();
+week.innerHTML=weekdays[today.getDay()];
+month.innerHTML=allmonths[today.getMonth()];
+year.innerHTML=today.getFullYear();
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image:url('https://img.freepik.com/free-vector/blank-square-colorful-abstract-frame_53876-100820.jpg?w=740&t=st=1706140571~exp=1706141171~hmac=89b51e7fc3eee6acd94b1cfd2f807bd8f69810031a9d790447eb44c2d335ec32') ;
+background-repeat:no-repeat ;
+background-size: cover;
+
+}
+.container{
+    width: 40%;
+    min-width: 350px;
+    max-height: 100%;
+    background: white;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    position: relative;
+top:30px;
+}
+#newtask{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 20px;
+}
+#taskinfo{
+    width: 75%;
+    height: 35px;
+    border: 2px solid rgb(160, 150, 150);
+    border-radius: 5px;
+    padding-left: 5px;
+
+}
+#add{
+    width:20%;
+    height: 35px;
+    border-radius:5px;
+    background: blue;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-weight: 600;
+}
+#tasklist{
+    margin-bottom: 9px;
+    padding:10px 20px;
+    display: felx;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.del {
+ /* Red background color */
+    color: #df0f0f;
+     /* White text color */
+    background-color: #df0f0f;
+    border-radius: 30px;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    
+    margin-left: 70%; /* Add some spacing between the text and the button */
+}
+
+.del i {
+    margin-right: 5px; /* Add spacing between the icon and the text */
+}
+
+
+.task {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #c2bfbf;
+    border-radius:5px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+color: rgb(85, 65, 65);
+}
+
+

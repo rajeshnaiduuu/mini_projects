@@ -1,0 +1,43 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(247, 244, 240);
+}
+.container{
+    background-color: rgb(21, 189, 189);
+    margin-top: 150px;
+    margin-left: 25%;
+    padding: 50px;
+height: 250px;
+width: 500px;
+display: block;
+
+
+}
+h1{
+    color: darkslategray;
+   margin-bottom: 0px;
+
+}
+#pass{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline:  none;
+    width: 70%;
+}
+#butt{
+    padding: 10px;
+    border: inset white;
+ 
+    margin: 10px;
+
+}
+#butt:hover{
+    background-color: blue;
+    font-weight: bolder;
+}

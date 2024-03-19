@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <div class="container">
+        <h1>RANDOM PASSWORD</h1>
+        <div class="dispaly">
+            <input type="text" id="pass" name="PASSWORD">
+            <button id="butt" onclick="generatePassword()">Generate password</button>
+        </div>
+    </div>
+
+    <script>
+        const passvalue = document.getElementById('pass');
+        const alphabet = ['A', 'a', 'B', 'b', 'C', 'c', 'D', 'd', 'E', 'e', 'F', 'f', 'G', 'g', 'H', 'h', 'I', 'i', 'J', 'j', 'K', 'k', 'L', 'l', 'M', 'm', 'N',
+         'n', 'O', 'o', 'P', 'p', 'Q', 'q', 'R', 'r', 'S', 's', 'T', 't', 'U', 'u', 'V', 'v', 'W', 'w', 'X', 'x', 'Y',
+          'y', 'Z', 'z'];
+        const symbols_numbers = ['!', '"', '#', '$', '%', '&', "'", '(', ')', '*', 
+                   '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
+                   ':', ';', '<', '=', '>', '?', '@', '[', '\\', ']', 
+                   '^', '_', '`', '{', '|', '}', '~', 
+                   '-', '.', '/', 
+                   '10'];
+        const length1 = 12;
+        const allchars = alphabet.concat(symbols_numbers);
+
+        function generatePassword() {
+            let password = '';
+            password += alphabet[Math.floor(Math.random() * alphabet.length)];
+            password += symbols_numbers[Math.floor(Math.random() * symbols_numbers.length)];
+            while (length1 > password.length) {
+                password += allchars[Math.floor(Math.random() * allchars.length)];
+            }
+            passvalue.value = password;
+        }
+    </script>
+</body>
+</html>

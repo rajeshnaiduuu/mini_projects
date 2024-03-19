@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylee.css">
+</head>
+<body>
+    <div class="gallary">
+<img src="C:\Users\Lenovo\Downloads\transparent-glass-bubble-with-youtube-logo-inside-it-removebg-preview.png" alt="" id="backbtn" width="70px" height="70px">
+
+    <div class="container">
+        <div>
+    <span><img src="https://img.freepik.com/free-photo/brunette-business-woman-with-wavy-long-hair-blue-eyes-stands-holding-notebook-hands_197531-343.jpg?size=626&ext=jpg&uid=R135370195&ga=GA1.1.988423639.1698324917&semt=ais" alt=""></span>
+    <span><img src="https://img.freepik.com/premium-photo/young-businessman-outdoor-smiling-confidently_53419-10563.jpg?size=626&ext=jpg&uid=R135370195&ga=GA1.1.988423639.1698324917&semt=ais" alt=""></span>
+    <span><img src="https://img.freepik.com/free-photo/girl-with-coffee_1157-8656.jpg?size=626&ext=jpg&uid=R135370195&ga=GA1.1.988423639.1698324917&semt=ais" alt=""></span>
+    </div>
+
+
+    <div>
+    <span><img src="https://img.freepik.com/free-photo/business-woman_74190-2277.jpg?size=626&ext=jpg&uid=R135370195&ga=GA1.1.988423639.1698324917&semt=ais" alt=""></span>
+    <span><img src="https://img.freepik.com/premium-photo/young-businessman-outdoor-smiling-confidently_53419-10563.jpg?size=626&ext=jpg&uid=R135370195&ga=GA1.1.988423639.1698324917&semt=ais" alt=""></span>
+    <span><img src="https://img.freepik.com/free-photo/fashion-young-brunette-woman-posing_144627-46928.jpg?size=626&ext=jpg&uid=R135370195&ga=GA1.1.988423639.1698324917&semt=ais" alt=""></span>
+    
+
+    </div>
+    </div>
+    <img src="C:\Users\Lenovo\Downloads\transparent-glass-bubble-with-youtube-logo-inside-it-removebg-preview.png" alt="" id="nextbtn"width="70px" height="70px">
+</div>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        let scrollcontainer = document.querySelector(".container");
+        let backbtn = document.getElementById("backbtn");
+        let nextbtn = document.getElementById("nextbtn");
+
+        scrollcontainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollcontainer.scrollLeft += evt.deltaY;
+        });
+
+        backbtn.addEventListener("click", () => {
+            scrollcontainer.style.scrollBehavior = "smooth";
+            scrollcontainer.scrollLeft -= 900;
+        });
+
+        nextbtn.addEventListener("click", () => {
+            scrollcontainer.style.scrollBehavior = "smooth";
+            scrollcontainer.scrollLeft += 900;
+        });
+    });
+</script>
+
+
+</body>
+</html>
