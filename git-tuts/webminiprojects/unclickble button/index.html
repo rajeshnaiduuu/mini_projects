@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Unclickble</title>
+</head>
+<body>
+
+    <div class="wraper">
+        <i class="fa-solid fa-circle-question"></i>
+        <h1 class="qestion">ARE TRYING TO GET JOB </h1>
+        <div class="button-group">
+            <button class="yes-btn">No</button>
+            <button class="no-btn">yes</button>
+
+        </div>
+
+
+    </div>
+    <script>
+const wrapper = document.querySelector('.wraper');
+const question = document.querySelector('.qestion');
+const yesBtn = document.querySelector('.yes-btn');
+const noBtn = document.querySelector('.no-btn');
+const wrapperRect = wrapper.getBoundingClientRect();
+const noBtnRect = noBtn.getBoundingClientRect();
+yesBtn.addEventListener('click', () => {
+    question.innerHTML = 'NEVER GIVE UP BRO TRY UNTILL YOU GET';
+});
+noBtn.addEventListener('mouseover', () => {
+    const i = Math.floor(Math.random() * (wrapperRect.width - noBtnRect.width)) + 1;
+    const j = Math.floor(Math.random() * (wrapperRect.height - noBtnRect.height)) + 1;
+    noBtn.style.left = i + 'px';
+    noBtn.style.top = j + 'px';
+});
+    </script>
+</body>
+</html>
